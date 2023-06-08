@@ -1,0 +1,24 @@
+:root {
+    --bg-clr: #eee;
+    --nav-bg-clr: lightblue;
+    --nav-txt-clr: white;
+    
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    min-height: 100vh;
+}
+
+.container {
+    border: 1px solid red;
+    height: 100%;
+}
