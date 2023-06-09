@@ -1,24 +1,316 @@
-:root {
-    --bg-clr: #eee;
-    --nav-bg-clr: lightblue;
-    --nav-txt-clr: white;
-    
-}
+/* --- base styles --- */
 
+/* 
+font-size: calc(0.625rem + 0.4vw);
+*/
+
+:root {
+    --nav-bg-clr: rgba(24, 149, 191, 0.872);
+    --nav-txt-clr: rgb(255, 255, 255);
+    --main-txt-clr: rgba(39, 37, 37, 0.801);
+    --bg-card-clr: #ead1d1d9;
+    --bg-primary-clr: #d1c9c9;
+    --p-txt-clr: rgb(130, 132, 144);
+    --hover-link: rgb(45, 109, 212);
+    --side-card-clr: rgb(220, 166, 19);
+    /* make p tags lighter text color */
+}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* border: 1px solid red; */
 }
 
+p {
+    line-height: 1.4;
+}
 
+ul {
+    list-style-type: none;
+}
 
 body {
     min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    /* padding: 20px; */
 }
 
 .container {
-    border: 1px solid red;
-    height: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    /* grid-template-rows: min(200px, 1fr) 5fr; */
+}
+
+/* --- Navigation --- */
+
+.navbar {
+    background-color: var(--nav-bg-clr);
+    grid-row: span 2;
+    color: var(--nav-txt-clr);
+    font-weight: bold;
+    font-size: clamp(0.5rem, 5vh, 1.3rem);
+    display: grid;
+    grid-template-rows: 100px 250px 200px;
+    gap: 20px;
+    padding: 15px;
+    
+}
+
+.title {
+    align-self: center;
+    justify-self: start;
+}
+
+.logo {
+    background-image: url('images/icons/jellyfish.svg');
+    background-size: 40px 40px;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    filter: brightness(0) saturate(100%) invert(100%);
+    width: 40px;
+    height: 40px;
+}
+
+.navbar ul {
+    display: grid;
+    gap: 8px;
+    place-content: start;
+    /* margin-right: 15px; */
+    margin-left: 15px;
+    
+}
+
+.flex {
+    display: flex;
+    /* justify-content: cente; */
+    align-items: center;
+}
+
+.icon:before {
+    content: ''; /* Setting content to an empty string is necessary for ::before to work */
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    /* margin-left: 20px; */
+    background-size: 20px 20px;
+    /* vertical-align: middle; */
+    background-repeat: no-repeat;
+    filter: brightness(0) saturate(100%) invert(100%);
+}
+
+.home:before {
+    background-image: url('images/icons/home-account.svg');
+}
+
+.profile:before {
+    background-image: url('images/icons/account\ \(1\).svg');
+}
+
+.forums:before {
+    background-image: url('images/icons/card-account-details-outline.svg');
+}
+
+.map:before {
+    background-image: url('images/icons/message-reply.svg');
+}
+
+.guides:before {
+    background-image: url('images/icons/clock-time-three.svg');
+}
+
+.events:before {
+    background-image: url('images/icons/account-group.svg');
+}
+
+.settings:before {
+    background-image: url('images/icons/cog.svg');
+}
+
+.support:before {
+    background-image: url('images/icons/help-box.svg');
+}
+
+.privacy:before {
+    background-image: url('images/icons/lock-check.svg');
+}
+
+.nav-symbol {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    place-items: center;
+    /* place-items: center; */
+}
+
+/* --- top dashboard content --- */
+.dashboard {
+    background-color: var(--bg-card-clr);
+    padding: 0.5em 5em;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+    /* grid-template-rows: repeat(auto-fit, minmax(300px, 1fr)); */
+    grid-template-rows: 1fr 1fr;
+    /* place-items: start; */
+    align-items: center;
+}
+
+.search:before {
+    background-image: url('images/icons/magnify.svg');
+    filter: none;
+}
+
+.profile-top {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-auto-flow:column;
+    /* place-content: end; */
+    justify-content: end;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile-top:before {
+    background-image: url('images/icons/bell-ring-outline.svg');
+    filter: none;
+}
+
+.profile-img {
+    width: 50px;
+    height: auto;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.greeting {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 8px;
+}
+
+.greeting .profile-img {
+    justify-self: end;
+    /* margin-right: 8px; */
+}
+.input-search {
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: lightgray;
+    width: 100%;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 10px;
+    padding: 5px;
+
+}
+
+.action-buttons {
+    display: grid;
+    /* place-content: end; */
+    justify-content: end;
+    align-items: center;
+    gap: 25px;
+    grid-template-columns: auto auto auto;
+}
+
+.action-buttons button {
+    padding: 10px 30px;
+    border-radius: 50px;
+    border: none;
+    font: inherit;
+    color: var(--nav-txt-clr);
+    background-color: var(--nav-bg-clr);
+    
+
+}
+
+/* --- main article content --- */
+
+.main-content {
+    background-color: var(--bg-primary-clr);
+    padding: 1em 5em;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 15px;
+  
+}
+
+.cards-wrapper {
+    background-color: red;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: auto repeat(auto-fit, minmax(300px, 1fr));
+    grid-row: span 2;
+    padding: 10px;
+    gap: 20px;
+    align-content: start;
+    
+}
+
+.project-title {
+    grid-column: 1 / -1;
+}
+
+.card {
+    background-color: #fff;
+    height: 300px;
+    /* padding: 20px; */
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: clamp(5px, 1vw, 10px) 1fr;
+    grid-template-rows: 1fr;
+    gap: 10px;
+
+}
+
+.card .title {
+    font-weight: bold;
+    font-size: calc(1rem + 0.4vw);
+}
+
+.card .text {
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--p-txt-clr);
+   
+}
+
+.color-border {
+    background-color: blue;
+    /* grid-row: 1 / 4; */
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.card-section {
+    padding: 25px 25px 10px 25px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.card-img {
+    width: 20px;
+    height: auto;
+}
+
+.card-icons {
+    justify-self: end;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 10px;
+}
+
+.announcements {
+    background-color: yellow;
+}
+
+.trending {
+    background-color: black;
 }

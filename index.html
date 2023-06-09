@@ -1,40 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="container">
         <nav class="navbar">
-            <div class="dashboard">
-                <div class="logo">Logo</div>
-                <h1>Hyrule Hub</h1>
+            <div class="nav-symbol">
+                <div class="logo"></div>
+                <h1 class="title">Hyrule Hub</h1>
             </div>
             <ul>
-                <li>Home</li>
-                <li>Profile</li>
-                <li>Forums</li>
-                <li>Map</li>
-                <li>Quest Guides</li>
-                <li>Community Events</li>
-                
+                <li class="icon home flex">Home</li>
+                <li class="icon profile flex">Profile</li>
+                <li class="icon forums flex">Forums</li>
+                <li class="icon map flex">Map</li>
+                <li class="icon guides flex">Quest Guides</li>
+                <li class="icon events flex">Community Events</li>
+
             </ul>
             <ul>
-                <li>Settings</li>
-                <li>Support</li>
-                <li>Privacy</li>
+                <li class="icon settings flex">Settings</li>
+                <li class="icon support flex">Support</li>
+                <li class="icon privacy flex">Privacy</li>
             </ul>
         </nav>
-        <section >
+        <section class="dashboard">
+            <div class="search icon flex">
+                <!-- magnifier icon before -->
+                <input class="input-search" type="text">
+            </div>
+            <div class="profile-top icon">
+                <!-- bell icon before -->
+                <img class="profile-img" src="./images/icons/zelda-icon-16.png" alt="zelda profile pic">
+                <div class="name">Zachary Kahlig</div>
+            </div>
+            <div class="greeting">
+                <img class="profile-img" src="./images/icons/zelda-icon-16.png" alt="zelda profile pic">
+                <div class="greeting-txt">
+                    <p>Hi there,</p>
+                    <h1>Zachary Kahlig (@kahlig)</h1>
+                </div>
+            </div>
+            <div class="action-buttons">
+                <button>New</button>
+                <button>Upload</button>
+                <button>Share</button>
+            </div>
+
 
         </section>
-        <main></main>
-        <section></section>
-        <section></section>
+        <main class="main-content">
+            <article class="cards-wrapper">
+                <h1 class="project-title">Projects</h1>
+                <div class="card">
+                    <div class="color-border"></div>
+                    <div class="card-section">
+                        <div class="title">Super Cool Project</div>
+                        <div class="text">sed tempus ut lacus ut scelerisque sed tempus ut lacus ut scelerisque</div>
+                        <div class="card-icons">
+                            <img class="card-img" src="./images/icons/star-plus-outline.svg" alt="star-icon">
+                            <img class="card-img" src="./images/icons/eye-plus-outline.svg" alt="eye-icon">
+                            <img class="card-img" src="./images/icons/source-fork.svg" alt="source fork">
+                    </div>
+                    </div>
+
+                </div>
+                <div class="card">
+                    <div class="color-border"></div>
+                    <div class="card-section">
+                        <div class="title">Super Cool Project</div>
+                        <div class="text">sed tempus ut lacus ut scelerisque sed tempus ut lacus ut scelerisque</div>
+                        <div class="card-icons">
+                            <img class="card-img" src="./images/icons/star-plus-outline.svg" alt="star-icon">
+                            <img class="card-img" src="./images/icons/eye-plus-outline.svg" alt="eye-icon">
+                            <img class="card-img" src="./images/icons/source-fork.svg" alt="source fork">
+                    </div>
+                    </div>
+
+                </div>
+                <div class="card">
+                    <div class="color-border"></div>
+                    <div class="card-section">
+                        <div class="title">Super Cool Project</div>
+                        <div class="text">sed tempus ut lacus ut scelerisque sed tempus ut lacus ut scelerisque</div>
+                        <div class="card-icons">
+                            <img class="card-img" src="./images/icons/star-plus-outline.svg" alt="star-icon">
+                            <img class="card-img" src="./images/icons/eye-plus-outline.svg" alt="eye-icon">
+                            <img class="card-img" src="./images/icons/source-fork.svg" alt="source fork">
+                    </div>
+                    </div>
+
+                </div>
+                <div class="card">
+                    <div class="color-border"></div>
+                    <div class="card-section">
+                        <div class="title">Super Cool Project</div>
+                        <div class="text">sed tempus ut lacus ut scelerisque sed tempus ut lacus ut scelerisque</div>
+                        <div class="card-icons">
+                            <img class="card-img" src="./images/icons/star-plus-outline.svg" alt="star-icon">
+                            <img class="card-img" src="./images/icons/eye-plus-outline.svg" alt="eye-icon">
+                            <img class="card-img" src="./images/icons/source-fork.svg" alt="source fork">
+                    </div>
+                    </div>
+
+                </div>
+                <div class="card">
+                    <div class="color-border"></div>
+                    <div class="card-section">
+                        <div class="title">Super Cool Project</div>
+                        <div class="text">sed tempus ut lacus ut scelerisque sed tempus ut lacus ut scelerisque</div>
+                        <div class="card-icons">
+                            <img class="card-img" src="./images/icons/star-plus-outline.svg" alt="star-icon">
+                            <img class="card-img" src="./images/icons/eye-plus-outline.svg" alt="eye-icon">
+                            <img class="card-img" src="./images/icons/source-fork.svg" alt="source fork">
+                    </div>
+                    </div>
+
+                </div>
+                <div class="card">
+                    <div class="color-border"></div>
+                    <div class="card-section">
+                        <div class="title">Super Cool Project</div>
+                        <div class="text">sed tempus ut lacus ut scelerisque sed tempus ut lacus ut scelerisque</div>
+                        <div class="card-icons">
+                            <img class="card-img" src="./images/icons/star-plus-outline.svg" alt="star-icon">
+                            <img class="card-img" src="./images/icons/eye-plus-outline.svg" alt="eye-icon">
+                            <img class="card-img" src="./images/icons/source-fork.svg" alt="source fork">
+                    </div>
+                    </div>
+
+                </div>
+            </article>
+            <section class="announcements"></section>
+            <section class="trending"></section>
+        </main>
+
     </div>
 </body>
+
 </html>
